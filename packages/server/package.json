@@ -1,0 +1,25 @@
+{
+  "name": "server",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node -r dotenv/config ./server.js",
+    "start:dev": "nodemon -r dotenv/config ./server.js"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "~4.16.1",
+    "http-errors": "^1.8.0",
+    "lodash": "^4.17.20",
+    "multer": "^1.4.2",
+    "pg": "^8.4.1",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^6.3.5",
+    "yup": "^0.29.3"
+  },
+  "devDependencies": {
+    "prettier": "^2.1.2",
+    "sequelize-cli": "^6.2.0",
+    "nodemon": "^2.0.4"
+  }
+}

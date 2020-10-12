@@ -1,0 +1,7 @@
+POST http://localhost:5000/api/todos
+Content-Type: application/json
+
+{
+    "text": "CREATE TODO APP",      
+    "deadline": "2020/10/12 14:00"
+}
