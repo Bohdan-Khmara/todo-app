@@ -17,10 +17,13 @@ exports.createTodo = async (req, res, next) => {
 };
 
 exports.getTodos = async (req, res, next) => {
-  const { pagination } = req;
+  const {
+    pagination: { results, page },
+  } = req;
   try {
     const todos = await Todo.findAll({
-      ...pagination,
+      limit: results,
+      offset: results * (page - 1),
     });
 
     res.send({ data: todos });
